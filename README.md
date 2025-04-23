@@ -1,5 +1,7 @@
 # LLM Search Agent Middleware
 
+A flexible middleware layer between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**).
+
 This tool was created because I was frustrated with the quality that all current attempts of a "web-search"in the LLM sector (not just Open-Source). It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
 For example when you search for a specific package in Python, or even better provide a direct link it should be able to scan that link and follow it properly with specific agents 
@@ -11,8 +13,11 @@ that properly extract information from git-repos or documentation, not just rand
 - **LangChain** for LLM prompt handling & SearxNG tool
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
-A flexible middleware layer between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It provides:
-Its an interface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). 
+
+## Usage (CLI, mainly for testing):
+```bash
+   python main.py "<your prompt here>"
+```
 
 ## Functionality:
 
