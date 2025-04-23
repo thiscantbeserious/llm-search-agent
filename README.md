@@ -14,18 +14,9 @@ This is **not** a standalone search engine. It acts as the glue between your pre
 ```markdown
 # LLM Search Agent Middleware
 
-A command-line interface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It orchestrates:
-
-- **Intent extraction** via LangChain `LLMChain`
-- **Web search retrieval** via LangChain's `SearxSearchWrapper`
-- **Result filtering, scoring, and accumulation**
-- **Answer synthesis** via LangChain `LLMChain`
+Aninterface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It orchestrates:
 
 This tool is **not** a standalone search engine. It acts as the glue between your LLM and your search backend, making it easy to integrate web search capabilities into conversational agents or other applications.
-
-## Project Structure
-```markdown
-# Agentic Web Search CLI Application
 
 Performs an intent‑driven web search and generates answers via:
 
