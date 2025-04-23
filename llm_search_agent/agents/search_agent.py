@@ -1,4 +1,4 @@
-from langchain_communities.utilities import SearxSearchWrapper
+from langchain_community.utilities import SearxSearchWrapper
 from llm_search_agent.config import Settings
 
 cfg = Settings()
@@ -7,20 +7,20 @@ search_tool = SearxSearchWrapper(
     unsecure=True
 )
 
+
 class SearchAgent:
     def __init__(self):
         self.tool = search_tool
-        self.k = cfg.results_per_round
         self.max_depth = cfg.max_depth
-        self.max_queries = cfg.max_width
+        self.max_width = cfg.max_width
 
     def search(self, intent: str) -> list[dict]:
         visited = set([intent.lower()])
         queue = [(intent, 0)]
         all_hits = []
-        while queue and len(visited) < self.max_queries:
+        while queue and len(visited) < self.max_depth:
             q, depth = queue.pop(0)
-            hits = self.tool.results(q, num_results=self.k)
+            hits = self.tool.results(q, num_results=self.max_width)
             all_hits.extend(hits)
             if depth < self.max_depth:
                 suggestions = getattr(self.tool, "_result", {}).get("suggestions", [])
@@ -28,5 +28,5 @@ class SearchAgent:
                     sv = s.strip().lower()
                     if sv and sv not in visited:
                         visited.add(sv)
-                        queue.append((sv, depth+1))
+                        queue.append((sv, depth + 1))
         return all_hits

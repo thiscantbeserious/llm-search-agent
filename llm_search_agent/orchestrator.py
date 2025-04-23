@@ -43,6 +43,12 @@ graph = builder.compile()
 
 
 def run_pipeline(query: str) -> State:
+    # 1) Build your initial state model
     init = State(query=query)
-    final: State = graph.run(init)
-    return final
+
+    # 2) Invoke the compiled graph with a dict
+    #    (you can also pass init.dict() if you prefer)
+    output_dict = graph.invoke(init.dict())
+
+    # 3) Turn the result back into your Pydantic State
+    return State(**output_dict)

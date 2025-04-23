@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     searxng_url: str = Field(..., env="SEARXNG_URL")
 
     # Optional fields
-    openai_api_key: str = Field("", env="OPENAI_API_KEY")
+    openai_api_key: str = Field("EMPTY_API_KEY", env="OPENAI_API_KEY")
     intent_temperature: float = Field(1.0, env="INTENT_TEMPERATURE")
     answer_temperature: float = Field(1.0, env="ANSWER_TEMPERATURE")
     max_depth: int = Field(3, env="MAX_DEPTH")

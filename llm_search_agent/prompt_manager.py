@@ -1,5 +1,5 @@
 import shutil
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 from llm_search_agent.constants import PROMPT_DIR, TEMPLATE_DIR
 
