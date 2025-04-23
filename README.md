@@ -1,8 +1,8 @@
 # LLM Search Agent Middleware
 
-# WARNING: This is not functional yet - just a boilerplate!
+# WARNING: This is not functional yet.
 
-A flexible middleware layer between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**).
+A flexible middleware layer between an LLM engine (currently focusing on **Ollama via OpenAI compatible API**) and a search engine (currently **SearxNG**).
 
 This tool was created because I was frustrated with the quality that all current attempts of a "web-search"in the LLM sector (not just Open-Source). It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
