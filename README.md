@@ -32,6 +32,6 @@ that properly extract information from git-repos or documentation, not just rand
 ## Setup
 1. Clone the repo
 2. Copy `.env` as provided and adjust URLs if needed
-3. Install dependencies:
+3. Install:
    ```bash
-   pip install -r requirements.txt
+   poetry install
