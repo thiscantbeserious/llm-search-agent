@@ -1,6 +1,6 @@
 # LLM Search Agent Middleware
 
-This tool was created because I was frustated with the quality that all current attempt create in the LLM sector.
+This tool was created because I was frustated with the quality that all current attempts of a "web-search" in the LLM sector (not just Open-Source).
 
 It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
