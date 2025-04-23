@@ -1,8 +1,11 @@
 # LLM Search Agent Middleware
 
-This tool was created because I was frustated with the quality that all current attempts of a "web-search" in the LLM sector (not just Open-Source).
+This tool was created because I was frustrated with the quality that all current attempts of a "web-search"in the LLM sector (not just Open-Source). 
 
 It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
+
+For example when you search for a specific package in Python, or even better provide a direct link it should be able to scan that link and follow it properly with specific agents 
+that properly extract information from git-repos or documentation, not just randomly google stuff. Furthermore it should answer just as intended in the prompt, not just random informations that make non sense.
 
 **Performs an intent‑driven web search and generates answers via:**
 
