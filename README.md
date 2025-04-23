@@ -1,31 +1,41 @@
-# Agentic Web Search CLI Application
+# LLM Search Agent Middleware
 
-A standalone Python CLI for an intent-driven web search pipeline using LangGraph and LangChain.
+A flexible middleware layer between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It provides:
+
+- **Intent extraction** via LangChain's `LLMChain`
+- **Web search retrieval** via LangChain's `SearxSearchWrapper`
+- **Result filtering, scoring, and accumulation**
+- **Answer synthesis** via LangChain's `LLMChain`
+- **Multiple transport connectors**: CLI, HTTP REST API, WebSocket
+
+This is **not** a standalone search engine. It acts as the glue between your preferred LLM backend and web search, making it easy to integrate dynamic search-driven capabilities into any application.
 
 ## Project Structure
-```
-llm-agent-search/
-├── .env                  # Configuration
-├── README.md
-├── requirements.txt
-├── main.py               # CLI launcher
-├── prompts/              # Customizable prompt overrides
-│   ├── intent_extraction.prompt
-│   └── answer_generation.prompt
-├── templates/            # Default prompt templates
-│   ├── intent_extraction.prompt
-│   └── answer_generation.prompt
-└── llm_search_agent/     # Main package
-    ├── config.py
-    ├── prompt_manager.py
-    ├── orchestrator.py
-    ├── pipeline/
-    │   └── agents/
-    │       ├── intent_agent.py
-    │       ├── search_agent.py
-    │       ├── filter_agent.py
-    │       ├── scoring_agent.py
-    │       └── answer_agent.py
-    └── llm/
-        └── ollama.py
-```
+```markdown
+# LLM Search Agent Middleware
+
+A command-line interface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It orchestrates:
+
+- **Intent extraction** via LangChain `LLMChain`
+- **Web search retrieval** via LangChain's `SearxSearchWrapper`
+- **Result filtering, scoring, and accumulation**
+- **Answer synthesis** via LangChain `LLMChain`
+
+This tool is **not** a standalone search engine. It acts as the glue between your LLM and your search backend, making it easy to integrate web search capabilities into conversational agents or other applications.
+
+## Project Structure
+```markdown
+# Agentic Web Search CLI Application
+
+Performs an intent‑driven web search and generates answers via:
+
+- **LangGraph** for stateful orchestration
+- **LangChain** for LLM prompt handling & SearxNG tool
+- **BFS/DFS** iterative retrieval with SearxNG suggestions
+
+## Setup
+1. Clone the repo
+2. Copy `.env` as provided and adjust URLs if needed
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
