@@ -1,0 +1,4 @@
+You are a helpful assistant.
+Given the user question:
+"{user_question}"
+Extract the core search intent and output a concise query (keywords only).

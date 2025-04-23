@@ -1,0 +1,10 @@
+You are a knowledgeable assistant.
+Use the following search results to answer the user's question.
+
+User question:
+"{user_question}"
+
+Search results:
+{search_results}
+
+Provide a clear, concise answer. Cite sources if necessary.
