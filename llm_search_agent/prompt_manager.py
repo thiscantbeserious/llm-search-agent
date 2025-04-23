@@ -1,26 +1,22 @@
 import shutil
-from pathlib import Path
 from langchain import PromptTemplate
+
+from llm_search_agent.constants import PROMPT_DIR, TEMPLATE_DIR
+
 
 class PromptManager:
     def __init__(
-        self,
-        base_dir: Path,
-        custom_dir_name: str = "prompts",
-        default_dir_name: str = "templates",
+        self
     ):
-        """
-        base_dir: project root (where 'prompts/' and 'templates/' live)
-        """
-        self.custom_dir  = (base_dir / custom_dir_name).resolve()
-        self.default_dir = (base_dir / default_dir_name).resolve()
+        self.prompt_dir  = PROMPT_DIR.resolve()
+        self.template_dir = TEMPLATE_DIR.resolve()
 
         # Ensure the prompts folder exists
-        self.custom_dir.mkdir(parents=True, exist_ok=True)
+        self.prompt_dir.mkdir(parents=True, exist_ok=True)
 
         # Copy over any missing templates
-        for tpl in self.default_dir.glob("*.prompt"):
-            dest = self.custom_dir / tpl.name
+        for tpl in self.template_dir.glob("*.prompt"):
+            dest = self.prompt_dir / tpl.name
             if not dest.exists():
                 shutil.copy(tpl, dest)
 
@@ -28,8 +24,8 @@ class PromptManager:
         """
         Load `<name>.prompt` from prompts/, raising if somehow missing.
         """
-        custom_path = self.custom_dir / f"{name}.prompt"
+        custom_path = self.prompt_dir / f"{name}.prompt"
         if not custom_path.exists():
-            raise FileNotFoundError(f"Prompt '{name}.prompt' not found in {self.custom_dir}")
+            raise FileNotFoundError(f"Prompt '{name}.prompt' not found in {self.prompt_dir}")
         text = custom_path.read_text(encoding="utf-8")
         return PromptTemplate(template=text, input_variables=variables)

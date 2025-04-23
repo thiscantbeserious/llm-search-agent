@@ -9,12 +9,14 @@ from llm_search_agent.agents.filter_agent import FilterAgent
 from llm_search_agent.agents.scoring_agent import ScoringAgent
 from llm_search_agent.agents.answer_agent import AnswerAgent
 
+
 class State(BaseModel):
     query: str
     intent: str = ""
     results: List[Dict[str, Any]] = []
     filtered: List[Dict[str, Any]] = []
     answer: str = ""
+
 
 cfg = Settings()
 ia = IntentAgent()
@@ -38,6 +40,7 @@ builder.add_edge("score_results", "synthesize_answer")
 builder.add_edge("synthesize_answer", END)
 
 graph = builder.compile()
+
 
 def run_pipeline(query: str) -> State:
     init = State(query=query)

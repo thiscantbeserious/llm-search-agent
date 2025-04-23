@@ -1,16 +1,23 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
 
+
 class Settings(BaseSettings):
-    txt_server_url: str = Field(..., env="TXT_SERVER_URL")
+    # Required fields
+    openai_api_url: str = Field(..., env="OPENAI_API_URL")
     intent_model: str = Field(..., env="INTENT_MODEL")
     answer_model: str = Field(..., env="ANSWER_MODEL")
     searxng_url: str = Field(..., env="SEARXNG_URL")
-    results_per_round: int = Field(..., env="RESULTS_PER_ROUND")
-    max_depth: int = Field(..., env="MAX_DEPTH")
-    max_queries: int = Field(..., env="MAX_QUERIES")
+
+    # Optional fields
+    openai_api_key: str = Field("", env="OPENAI_API_KEY")
+    intent_temperature: float = Field(1.0, env="INTENT_TEMPERATURE")
+    answer_temperature: float = Field(1.0, env="ANSWER_TEMPERATURE")
+    max_depth: int = Field(3, env="MAX_DEPTH")
+    max_width: int = Field(5, env="MAX_WIDTH")
 
     model_config = SettingsConfigDict(
         env_file=".env",
-        env_file_encoding="utf-8"
+        env_file_encoding="utf-8",
+        env_ignore_empty=True,
     )

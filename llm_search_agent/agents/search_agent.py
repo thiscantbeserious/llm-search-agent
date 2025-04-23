@@ -12,7 +12,7 @@ class SearchAgent:
         self.tool = search_tool
         self.k = cfg.results_per_round
         self.max_depth = cfg.max_depth
-        self.max_queries = cfg.max_queries
+        self.max_queries = cfg.max_width
 
     def search(self, intent: str) -> list[dict]:
         visited = set([intent.lower()])
