@@ -3,11 +3,11 @@ from typing import List, Dict, Any
 from langgraph.graph import StateGraph, END
 
 from llm_search_agent.config import Settings
-from llm_search_agent.pipeline.agents.intent_agent import IntentAgent
-from llm_search_agent.pipeline.agents.search_agent import SearchAgent
-from llm_search_agent.pipeline.agents.filter_agent import FilterAgent
-from llm_search_agent.pipeline.agents.scoring_agent import ScoringAgent
-from llm_search_agent.pipeline.agents.answer_agent import AnswerAgent
+from llm_search_agent.agents.intent_agent import IntentAgent
+from llm_search_agent.agents.search_agent import SearchAgent
+from llm_search_agent.agents.filter_agent import FilterAgent
+from llm_search_agent.agents.scoring_agent import ScoringAgent
+from llm_search_agent.agents.answer_agent import AnswerAgent
 
 class State(BaseModel):
     query: str
