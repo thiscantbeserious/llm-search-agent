@@ -1,28 +1,25 @@
 # LLM Search Agent Middleware
 
+This tool was created because I was frustated with the quality that all current attempt create in the LLM sector.
+
+It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
+
+**Performs an intent‑driven web search and generates answers via:**
+
+- **LangGraph** for stateful orchestration
+- **LangChain** for LLM prompt handling & SearxNG tool
+- **BFS/DFS** iterative retrieval with SearxNG suggestions
+
 A flexible middleware layer between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It provides:
+Its an interface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). 
+
+## Functionality:
 
 - **Intent extraction** via LangChain's `LLMChain`
 - **Web search retrieval** via LangChain's `SearxSearchWrapper`
 - **Result filtering, scoring, and accumulation**
 - **Answer synthesis** via LangChain's `LLMChain`
 - **Multiple transport connectors**: CLI, HTTP REST API, WebSocket
-
-This is **not** a standalone search engine. It acts as the glue between your preferred LLM backend and web search, making it easy to integrate dynamic search-driven capabilities into any application.
-
-## Project Structure
-```markdown
-# LLM Search Agent Middleware
-
-Aninterface that implements a **middleware layer** between an LLM engine (currently **Ollama**) and a search engine (currently **SearxNG**). It orchestrates:
-
-This tool is **not** a standalone search engine. It acts as the glue between your LLM and your search backend, making it easy to integrate web search capabilities into conversational agents or other applications.
-
-Performs an intent‑driven web search and generates answers via:
-
-- **LangGraph** for stateful orchestration
-- **LangChain** for LLM prompt handling & SearxNG tool
-- **BFS/DFS** iterative retrieval with SearxNG suggestions
 
 ## Setup
 1. Clone the repo
