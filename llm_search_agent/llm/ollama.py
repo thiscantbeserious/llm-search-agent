@@ -11,7 +11,7 @@ class OllamaFactory(AbstractLLMFactory[OllamaLLM]):
     @classmethod
     def _create_llm(cls, model: str, temperature: float) -> OllamaLLM:
         """Return a configured Ollama LLM for the given model."""
-        logger.debug("Loading Ollama LLM against %s with model: %s", cfg.ollama_url, cfg.intent_model)
+        logger.debug("Loading Ollama LLM against %s with model: %s", cfg.ollama_url, model)
         return OllamaLLM(
             base_url=cfg.ollama_url,
             api_key=cfg.openai_api_key,

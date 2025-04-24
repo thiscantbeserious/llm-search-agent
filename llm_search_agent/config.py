@@ -3,7 +3,7 @@ from pydantic import Field
 
 
 class Config(BaseSettings):
-    # LMM Backend
+    # LMM Backend (either OLLAMA_URL or OPENAI_API_URL has to be specified - not both)
     ollama_url: str | None = Field(None, env="OLLAMA_URL")
     openai_api_url: str | None = Field(None, env="OPENAI_API_URL")
     openai_api_key: str | None = Field(None, env="OPENAI_API_KEY")
