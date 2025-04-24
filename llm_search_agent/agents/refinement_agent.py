@@ -10,10 +10,10 @@ prompt_mgr = PromptManager()
 answer_prompt = prompt_mgr.load("answer_generation", ["user_question", "search_results"])
 
 
-class AnswerAgent:
+class RefinementAgent:
     def __init__(self, llm=None):
         # Allow injection (useful for tests), default to our single provider
-        self.llm = llm or load_llm_with_model(cfg.answer_model, cfg.answer_temperature)
+        self.llm = llm or load_llm_with_model(cfg.refinement_model, cfg.refinement_temperature)
         self.chain: RunnableSerializable[dict[str, str], str] = (
                 answer_prompt | self.llm | StrOutputParser()
         )

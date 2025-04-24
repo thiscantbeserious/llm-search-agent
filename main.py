@@ -6,5 +6,5 @@ if __name__ == "__main__":
     #     print("Usage: python main.py \"Your question here\"")
     #     sys.exit(1)
     # query = " ".join(sys.argv[1:])
-    state = run_pipeline("Ich hätte gerne die aktuelle Uhrzeit")
+    state = run_pipeline("Ich hätte gerne die aktuelle Uhrzeit, ich habe gehört google.com ist eine gute Quelle dafür. Oder war es duckduckgo.com?")
     print(state.json(indent=2))

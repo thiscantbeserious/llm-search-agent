@@ -7,7 +7,7 @@ from llm_search_agent.agents.intent_agent import IntentAgent
 from llm_search_agent.agents.search_agent import SearchAgent
 from llm_search_agent.agents.filter_agent import FilterAgent
 from llm_search_agent.agents.scoring_agent import ScoringAgent
-from llm_search_agent.agents.answer_agent import AnswerAgent
+from llm_search_agent.agents.answer_agent import RefinementAgent
 
 
 class State(BaseModel):
@@ -23,7 +23,7 @@ ia = IntentAgent()
 sa = SearchAgent()
 fa = FilterAgent()
 sca = ScoringAgent()
-aa = AnswerAgent()
+aa = RefinementAgent()
 
 builder = StateGraph(State)
 builder.add_node("extract_intent", lambda s: {"intent": ia.extract(s.query)})

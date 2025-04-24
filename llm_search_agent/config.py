@@ -17,8 +17,8 @@ class Config(BaseSettings):
     intent_model: str = Field(..., env="INTENT_MODEL")
     intent_temperature: float = Field(1.0, env="INTENT_TEMPERATURE")
 
-    answer_model: str = Field(..., env="ANSWER_MODEL")
-    answer_temperature: float = Field(1.0, env="ANSWER_TEMPERATURE")
+    refinement_model: str = Field(..., env="REFINEMENT_MODEL")
+    refinement_temperature: float = Field(1.0, env="REFINEMENT_TEMPERATURE")
 
     model_config = SettingsConfigDict(
         env_file=".env",
