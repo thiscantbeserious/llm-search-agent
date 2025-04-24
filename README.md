@@ -6,12 +6,24 @@ A flexible middleware layer between an LLM engine and a search engine.
 
 Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
-### Supported LLMs:
- - Ollama (tested) 
- - OpenAI (untested)
+#### Supported LLMs:
+| LLM    | Status       |
+|--------|--------------|
+| Ollama | `working`    |
+| OpenAI | `unverified` |
 
-### Supported Search-Engines:
-- SearXNG
+#### Supported Search-Engines:
+| Search Engine | Status              |
+|---------------|---------------------|
+| SearXNG       | `needs development` |
+
+#### Support Transport Layers:
+
+| Transport Layer       | Status           |
+|-----------------------|------------------|
+| CLI Conversations     | `working`        |
+| HTTP REST API         | `needs testing`  |
+| WebSocket-Server      | `needs testing`  |
 
 ## Description:
 
@@ -27,10 +39,12 @@ For example when you search for a specific package in Python, or even better pro
 
 
 ## Usage:
-- `poetry run cli` or `poetry run cli all` - Start all Services
-- `poetry run cli cmd` - WebSocket API
-- `poetry run cli api` - HTTP REST API
-- `poetry run cli ws` - WebSocket API
+| Command              | Description        |
+|----------------------|--------------------|
+| `poetry run cli`     | Start all Services |
+| `poetry run cli cmd` | Commandline REPL   |
+| `poetry run cli api` | HTTP REST API      |
+| `poetry run cli ws`  | WebSocket API      |
 
 
 
