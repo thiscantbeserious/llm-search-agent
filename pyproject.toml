@@ -1,18 +1,21 @@
 [tool.poetry]
 name = "llm-search-agent"
 version = "0.0.1"
-description = "Performs an agent‑driven web search and generates better answers as a knowdlege base for LLMS."
+description = "Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS."
 authors = ["Simon S. - youcantbeserious"]
 readme = "README.md"
 license = "GPL-3.0-or-later"
 packages = [ { include = "llm_search_agent" } ]
+
+[tool.poetry.scripts]
+cmd = "cmd:execute"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 pydantic-settings = ">=2.0.0"
 langchain = ">=0.3.24"
 langchain-community = ">=0.3.22"
-langgraph = ">=0.3.31"
+langgraph = ">=0.3.33"
 requests = ">=2.32.3"
 python-dotenv = ">=1.1.0"
 langchain-core = "^0.3.55"

@@ -7,7 +7,7 @@ from llm_search_agent.agents.intent_agent import IntentAgent
 from llm_search_agent.agents.search_agent import SearchAgent
 from llm_search_agent.agents.filter_agent import FilterAgent
 from llm_search_agent.agents.scoring_agent import ScoringAgent
-from llm_search_agent.agents.answer_agent import RefinementAgent
+from llm_search_agent.agents.refinement_agent import RefinementAgent
 
 
 class State(BaseModel):

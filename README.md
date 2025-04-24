@@ -1,8 +1,19 @@
 # LLM Search Agent Middleware
 
-# WARNING: This is not functional yet.
+> **WARNING**: This is currently being crafted, I will remove this message as soon as I consider it usable / shareable.
 
-A flexible middleware layer between an LLM engine (currently focusing on **Ollama via OpenAI compatible API**) and a search engine (currently **SearxNG**).
+A flexible middleware layer between an LLM engine and a search engine.
+
+Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
+
+### Supported LLMs:
+ - Ollama (tested) 
+ - OpenAI (untested)
+
+### Supported Search-Engines:
+- SearXNG
+
+## Description:
 
 This tool was created because I was frustrated with the quality of current attempts of a "web-search" in the LLM sector (not just Open-Source). It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
@@ -17,7 +28,11 @@ For example when you search for a specific package in Python, or even better pro
 
 ## Usage (CLI, mainly for testing):
 ```bash
-   python main.py "<your prompt here>"
+   # either via poetry
+   poetry run cmd "<your prompt here>"
+   
+   # or via python
+   python cmd.py "<your prompt here>"
 ```
 
 ## Functionality:
@@ -30,7 +45,7 @@ For example when you search for a specific package in Python, or even better pro
 
 ## Setup
 1. Clone the repo
-2. Copy `.env` as provided and adjust URLs if needed
+2. Adjust `.env` as required (check `config.pg` for possible config)
 3. Install:
    ```bash
    poetry install
