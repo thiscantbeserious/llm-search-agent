@@ -1,10 +1,8 @@
 # LLM Search Agent Middleware
 
+A flexible middleware layer between an LLM engine and a search engine. Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
+
 > **WARNING**: This is currently being crafted, I will remove this message as soon as I consider it usable / shareable.
-
-A flexible middleware layer between an LLM engine and a search engine.
-
-Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
 ## Support Status
 
@@ -13,7 +11,7 @@ Performs an agent‑driven web search and generates better answers as a knowledg
     <td valign="top" style="border:none">
       <table>
         <thead>
-          <tr><th>LLM</th><th>Status</th></tr>
+          <tr><th >LLM</th><th>Status</th></tr>
         </thead>
         <tbody>
           <tr>
