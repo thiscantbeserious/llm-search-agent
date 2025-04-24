@@ -55,7 +55,8 @@ A flexible middleware layer between an LLM engine and a search engine. Performs 
   </tr>
 </table>
 
-
+## Flowchart
+<img src="flowchart.svg" alt="Flowchart" width="auto"/>
 
 
 ## Description
