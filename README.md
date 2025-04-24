@@ -17,7 +17,7 @@ Performs an agent‑driven web search and generates better answers as a knowledg
 |---------------|---------------------|
 | SearXNG       | `development` |
 
-#### Support Transport Layers:
+#### Supported Transport Layers:
 
 | Transport Layer       | Status           |
 |-----------------------|------------------|
