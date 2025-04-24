@@ -1,7 +1,7 @@
 from langchain_community.utilities import SearxSearchWrapper
-from llm_search_agent.config import Settings
+from llm_search_agent.config import Config
 
-cfg = Settings()
+cfg = Config()
 search_tool = SearxSearchWrapper(
     searx_host=cfg.searxng_url,
     unsecure=True

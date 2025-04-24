@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import List, Dict, Any
 from langgraph.graph import StateGraph, END
 
-from llm_search_agent.config import Settings
+from llm_search_agent.config import Config
 from llm_search_agent.agents.intent_agent import IntentAgent
 from llm_search_agent.agents.search_agent import SearchAgent
 from llm_search_agent.agents.filter_agent import FilterAgent
@@ -18,7 +18,7 @@ class State(BaseModel):
     answer: str = ""
 
 
-cfg = Settings()
+cfg = Config()
 ia = IntentAgent()
 sa = SearchAgent()
 fa = FilterAgent()
