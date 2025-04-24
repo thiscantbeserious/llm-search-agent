@@ -6,24 +6,52 @@ A flexible middleware layer between an LLM engine and a search engine.
 
 Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
-#### Supported LLMs:
-| LLM                                        | Status    |
-|--------------------------------------------|-----------|
-| [ollama](https://github.com/ollama/ollama) | `working` |
-| [OpenAI API](https://platform.openai.com)  | `implemented`, `unverified` |
+### Support Status:
+<div style="display: flex; gap: 2rem; align-items: flex-start;">
 
-#### Supported Search-Engines:
-| Search Engine                                 | Status |
-|-----------------------------------------------|--------|
-| [SearXNG](https://github.com/searxng/searxng) | `development` |
+  <!-- LLM Table -->
+  <table>
+    <thead>
+      <tr><th>LLM</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/ollama/ollama">ollama</a></td>
+        <td><code>working</code></td>
+      </tr>
+      <tr>
+        <td><a href="https://platform.openai.com">OpenAI API</a></td>
+        <td><code>implemented</code>, <code>unverified</code></td>
+      </tr>
+    </tbody>
+  </table>
 
-#### Supported Transport Layers:
+  <!-- Search Engine Table -->
+  <table>
+    <thead>
+      <tr><th>Search Engine</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/searxng/searxng">SearXNG</a></td>
+        <td><code>development</code></td>
+      </tr>
+    </tbody>
+  </table>
 
-| Transport Layer       | Status           |
-|-----------------------|------------------|
-| CLI Conversations     | `working`        |
-| HTTP REST API         | `testing`  |
-| WebSocket-Server      | `testing`  |
+  <!-- Transport Layer Table -->
+  <table>
+    <thead>
+      <tr><th>Transport Layer</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CLI Conversations</td><td><code>working</code></td></tr>
+      <tr><td>HTTP REST API</td><td><code>testing</code></td></tr>
+      <tr><td>WebSocket-Server</td><td><code>testing</code></td></tr>
+    </tbody>
+  </table>
+
+</div>
 
 ## Description:
 
