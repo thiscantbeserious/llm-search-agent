@@ -45,8 +45,8 @@ A flexible middleware layer between an LLM engine and a search engine. Performs 
         </thead>
         <tbody>
           <tr><td>CLI Conversations</td><td><code>working</code></td></tr>
-          <tr><td>HTTP REST API</td><td><code>testing</code></td></tr>
-          <tr><td>WebSocket-Server</td><td><code>testing</code></td></tr>
+          <tr><td>HTTP REST API</td><td><code>implemented</code>, <code>testing</code></td></tr>
+          <tr><td>WebSocket-Server</td><td><code>implemented</code>, <code>testing</code></td></tr>
         </tbody>
       </table>
     </td>
