@@ -59,7 +59,7 @@ For example when you search for a specific package in Python, or even better pro
 
 ## Setup
 1. Clone the repo
-2. Adjust `.env` as required (check `config.pg` for possible config)
-3. Install:
-   ```bash
+2. Adjust `.env` as required (check `config.py` for possible config)
+3. ```bash
    poetry install
+   ```
