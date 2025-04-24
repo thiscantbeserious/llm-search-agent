@@ -71,18 +71,6 @@ For example when you search for a specific package in Python, or even better pro
 - **LangChain** for LLM prompt handling & SearxNG tool
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
-
-## Usage
-| Command              | Description        |
-|----------------------|--------------------|
-| `poetry run cli`     | Start all Services |
-| `poetry run cli cmd` | Commandline REPL   |
-| `poetry run cli api` | HTTP REST API      |
-| `poetry run cli ws`  | WebSocket API      |
-
-
-
-
 ## Functionality
 
 - **Intent extraction** via LangChain's `LLMChain`
@@ -95,3 +83,12 @@ For example when you search for a specific package in Python, or even better pro
 1. Clone the repo
 2. Adjust `.env` as required (check `config.py` for possible config)
 3. Run `poetry install` in Terminal
+
+
+## Usage
+| Command              | Description        |
+|----------------------|--------------------|
+| `poetry run cli`     | Start all Services |
+| `poetry run cli cmd` | Commandline REPL   |
+| `poetry run cli api` | HTTP REST API      |
+| `poetry run cli ws`  | WebSocket API      |
