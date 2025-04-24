@@ -85,7 +85,7 @@ For example when you search for a specific package in Python, or even better pro
 3. Run `poetry install` in Terminal
 
 
-## Commands
+## Usage via Terminal
 | Command              | Description        |
 |----------------------|--------------------|
 | `poetry run cli`     | Start all Services |
