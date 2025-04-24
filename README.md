@@ -4,7 +4,7 @@ A flexible middleware layer between an LLM engine and a search engine. Performs 
 
 > **WARNING**: This is currently being crafted, I will remove this message as soon as I consider it usable / shareable.
 
-## Support Status
+## Supported Technologies
 
 <table border="0" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:none">
   <tr style="border:none">
