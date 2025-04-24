@@ -8,7 +8,9 @@ license = "GPL-3.0-or-later"
 packages = [ { include = "llm_search_agent" } ]
 
 [tool.poetry.scripts]
-cmd = "cmd:execute"
+cmd = "run_cmd:execute"
+api = "run_api:main"
+socket = "run_socket:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -21,6 +23,10 @@ python-dotenv = ">=1.1.0"
 langchain-core = "^0.3.55"
 langchain-openai = "^0.3.14"
 langchain-ollama = "^0.3.2"
+websockets = "^15.0.1"
+uvicorn = "^0.34.2"
+fastapi = "^0.115.12"
+asyncio = "^3.4.3"
 
 [build-system]
 requires = ["poetry-core>=2.0.0"]
