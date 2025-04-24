@@ -8,9 +8,7 @@ license = "GPL-3.0-or-later"
 packages = [ { include = "llm_search_agent" } ]
 
 [tool.poetry.scripts]
-cmd = "run_cmd:repl"
-api = "run_api:main"
-socket = "run_socket:main"
+cli = "cli:run"
 
 [tool.poetry.dependencies]
 python = "^3.11"

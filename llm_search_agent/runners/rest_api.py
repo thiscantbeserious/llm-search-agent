@@ -13,6 +13,16 @@ class QueryRequest(BaseModel):
     query: str
 
 
+@v1.get("/health")
+async def health_check():
+    """
+    Simple health check:
+    - Returns 200 OK and JSON {"status":"ok"}
+      when the API is fully up and ready.
+    """
+    return {"status": "ok"}
+
+
 @v1.post("/search")
 async def search_endpoint(req: QueryRequest):
     q = req.query.strip()
@@ -25,9 +35,10 @@ async def search_endpoint(req: QueryRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-def main():
-    uvicorn.run("run_api:v1", host=cfg.api_host, port=cfg.api_port, reload=True)
+def start(host: str | None = None, port: int | None = None, reload: bool = True):
+    uvicorn.run("llm_search_agent.runners.rest_api:v1", host=host or cfg.api_host, port=port or cfg.api_port,
+                reload=reload)
 
 
 if __name__ == "__main__":
-    main()
+    start()

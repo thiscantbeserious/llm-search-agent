@@ -26,14 +26,14 @@ For example when you search for a specific package in Python, or even better pro
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
 
-## Usage (CLI, mainly for testing):
-```bash
-   # either via poetry
-   poetry run cmd "<your prompt here>"
-   
-   # or via python
-   python cmd.py "<your prompt here>"
-```
+## Usage:
+- `poetry run cli` or `poetry run cli all` - Start all Services
+- `poetry run cli cmd` - WebSocket API
+- `poetry run cli api` - HTTP REST API
+- `poetry run cli ws` - WebSocket API
+
+
+
 
 ## Functionality:
 

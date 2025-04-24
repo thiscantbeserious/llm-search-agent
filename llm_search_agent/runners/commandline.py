@@ -2,7 +2,7 @@ import sys
 from llm_search_agent.orchestrator import run_pipeline
 
 
-def repl():
+def start():
     """Read–Eval–Print Loop for continuous queries."""
     banner = "LLM Search Agent REPL. Type 'exit()' or 'quit()' to stop."
     print(banner)
@@ -27,4 +27,4 @@ def repl():
 
 
 if __name__ == "__main__":
-    repl()
+    start()
