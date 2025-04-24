@@ -1,5 +1,7 @@
 # LLM Search Agent Middleware
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 A flexible middleware layer between an LLM engine and a search engine. Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
 > **WARNING**: This is currently being crafted, I will remove this message as soon as I consider it usable / shareable.
