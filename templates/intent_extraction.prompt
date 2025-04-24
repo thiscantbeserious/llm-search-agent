@@ -1,4 +1,30 @@
-You are a helpful assistant.
-Given the user question:
+User Input:
 "{user_question}"
-Extract the core search intent and output a concise query (keywords only).
+
+Current Date: {current_date}
+Current Time: {current_time}
+
+Response-Template:
+{{
+    "prompt": "the original prompt",
+    "intent": "the search query your came up with",
+    "links": [
+        {{
+            "link": "the link you found",
+            "description": "a short description of the link you should come up with"
+        }}
+    ]
+}}
+-----------
+
+Task: Extract the core search intent from the user input to use that as the query for search engines.
+
+1. You should always respond with a JSON object in the same structure as above (Response-Template).
+2. The "prompt" field should always be the same as the original prompt.
+3. The "intent" field should be a concise search query that captures the essence of the user input.
+4. The "intent" field should be a proper search query, that means it should be absolutely in the native prompt language.
+5. If it makes sense include the Current Date and Current Time in the "intent" construction, but only if it is relevant to the search query.
+6. The "links" field should contain an array of objects, each with a "link" and "description" field - only if you have found relevant links in the original prompt.
+7. If you cannot find any relevant links in the prompt, you should return an empty array in the "links" field.
+
+Absolutely make sure you uphold these instructions.
