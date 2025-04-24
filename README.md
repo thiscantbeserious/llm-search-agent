@@ -7,23 +7,23 @@ A flexible middleware layer between an LLM engine and a search engine.
 Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
 #### Supported LLMs:
-| LLM    | Status       |
-|--------|--------------|
-| Ollama | `working`    |
-| OpenAI | `unverified` |
+| LLM        | Status                      |
+|------------|-----------------------------|
+| Ollama     | `working`                   |
+| OpenAI API | `implemented`, `unverified` |
 
 #### Supported Search-Engines:
 | Search Engine | Status              |
 |---------------|---------------------|
-| SearXNG       | `needs development` |
+| SearXNG       | `development` |
 
 #### Support Transport Layers:
 
 | Transport Layer       | Status           |
 |-----------------------|------------------|
 | CLI Conversations     | `working`        |
-| HTTP REST API         | `needs testing`  |
-| WebSocket-Server      | `needs testing`  |
+| HTTP REST API         | `testing`  |
+| WebSocket-Server      | `testing`  |
 
 ## Description:
 
