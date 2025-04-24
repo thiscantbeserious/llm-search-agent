@@ -6,7 +6,7 @@ A flexible middleware layer between an LLM engine and a search engine.
 
 Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
-## Support Status:
+## Support Status
 
 <table border="0" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:none">
   <tr style="border:none">
@@ -58,7 +58,7 @@ Performs an agent‑driven web search and generates better answers as a knowledg
 
 
 
-## Description:
+## Description
 
 This tool was created because I was frustrated with the quality of current attempts of a "web-search" in the LLM sector (not just Open-Source). It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
@@ -71,7 +71,7 @@ For example when you search for a specific package in Python, or even better pro
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
 
-## Usage:
+## Usage
 | Command              | Description        |
 |----------------------|--------------------|
 | `poetry run cli`     | Start all Services |
@@ -82,7 +82,7 @@ For example when you search for a specific package in Python, or even better pro
 
 
 
-## Functionality:
+## Functionality
 
 - **Intent extraction** via LangChain's `LLMChain`
 - **Web search retrieval** via LangChain's `SearxSearchWrapper`
