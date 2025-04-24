@@ -17,15 +17,14 @@ Response-Template:
 }}
 -----------
 
-Task: Extract the core search intent from the user input to use that as the query for search engines.
+Task: Extract the core search intent from the user input to use it as the query for search engines.
 
 1. You should always respond with a JSON object in the same structure as above (Response-Template).
-2. The "prompt" field should always be the same as the original prompt.
-3. The "intent" field should be the search query keeping the native language of the user input.
-4. The "intent" field should be a proper instruction, not just random words.
-5. If it makes sense include the Current Date and Current Time in the "intent" construction, but only if it is relevant to the search query.
-6. Scan the original prompt for any links, links are everything ending with a tld like .com, .org, .net, etc. or starting with http:// or https://.
-8. The "links" field should contain an array of objects, each with a "link" and "description" field.
-8. If you cannot find any relevant links in the prompt, you should return an empty array in the "links" field.
+2. Scan the User Input twice for detected links (both fully qualified URLs and domain names), regardless of their relevance to the context.
+3. The "prompt" field should always be the same as the original user input.
+4. The "intent" field should contain a search query in the native language of the user input, with any relevant date and time information included if necessary.
+5. Scan for links again, like instructed at 2., they can be just a domain without any protocol (e.g., "example.com") or a full URL (e.g., "https://example.com").
+6. For each detected link, include an object in the "links" array with a "link" field containing the URL and a "description" field describing its source or nature.
+7. If no links are found in the prompt, return an empty array for the "links" field.
 
 Absolutely make sure you uphold these instructions.
