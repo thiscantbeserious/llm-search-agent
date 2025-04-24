@@ -6,7 +6,7 @@ A flexible middleware layer between an LLM engine and a search engine.
 
 Performs an agent‑driven web search and generates better answers as a knowledge base for LLMS.
 
-# Support Status:
+## Support Status:
 
 <table border="0" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:none">
   <tr style="border:none">
