@@ -1,12 +1,9 @@
-# llm_search_agent/runners/websocket.py
-
 import sys
 import json
 import asyncio
-from http import HTTPStatus
 
 import websockets
-from websockets import ServerConnection, Request, Response
+from websockets import ServerConnection
 
 from llm_search_agent.config import Config
 from llm_search_agent.orchestrator import run_pipeline
