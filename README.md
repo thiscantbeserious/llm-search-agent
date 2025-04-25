@@ -2,7 +2,7 @@
 
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
-A flexible middleware layer between an LLM engine and a search engine. Performs an agent‑driven web search, that can be used both for the user as well as provide a knowdlege base for LLMs to provide answer that are not accessible trough sheer training alone.
+A flexible middleware layer between an LLM engine and a search engine. Performs an agent‑driven web search, that can be used both for the user as well as provide a knowdlege base for LLMs to provide answers that are not accessible trough sheer training alone.
 
 This tool was created because I was frustrated with the quality of current attempts of a "web-search" in the LLM sector (not just Open-Source). It aims to generate a better web search experience to provide a better knowledge base for LLMs to generate their answers.
 
