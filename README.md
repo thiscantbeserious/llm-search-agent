@@ -1,4 +1,4 @@
-# LLM Search Agent Middleware
+# LLM Search Agent
 
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
