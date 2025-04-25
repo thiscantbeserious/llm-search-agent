@@ -2,23 +2,23 @@
 
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
-Performs an agent‑driven web search, that can be used both for the user as well as provide a knowdlege base for LLMs to provide answers that are not accessible trough sheer training alone (aka enriching answers that are not constantly outdated). 
+Performs an agent-driven web search that can be used both by the user and to provide a knowledge base for LLMs, delivering answers that are not accessible through sheer training alone (aka enriching answers that are not constantly outdated).
 
-It could be also seen as "Deep Research" but I refuse to call something "Deep Research" if we didn`t even solve the basics correct yet.
+It could also be seen as "Deep Research," but I refuse to call something "Deep Research" if we haven’t even solved the basics correctly yet.
 
-This tool was created because I was frustrated with the quality of current attempts of a "web-search" in the LLM sector (not just, but especially looking at Open-Source). 
+This tool was created because I was frustrated with the quality of current attempts at a "web search" in the LLM sector (not just, but especially when looking at open source).
 
-For example when you search for a specific package in Python, or even better provide a direct link it should be able to scan that link and follow it properly with specific agents that properly extract information from git-repos or documentation, not just randomly google stuff. Furthermore it should answer just as intended in the prompt, not just random informations that make non sense.
+For example, when you search for a specific package in Python—or even better, provide a direct link—it should be able to scan that link and follow it properly with specific agents that accurately extract information from git repos or documentation, not just randomly Google stuff. Furthermore, it should answer exactly as intended in the prompt, not just provide random information that makes no sense.
 
-(Could also be seen as a flexible middleware layer between an LLM engine and a search engine).
+(It could also be seen as a flexible middleware layer between an LLM engine and a search engine.)
 
-**Performs an intent‑driven web search and generates answers via:**
+**Performs an intent-driven web search and generates answers via:**
 
 - **LangGraph** for stateful orchestration
 - **LangChain** for LLM prompt handling & SearxNG tool
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
-> **WARNING**: This is currently just a very basic prototype, I will remove this message as soon as I consider it usable / shareable. For example right now it just aimed at one LLM-Engine, which will change in the future enabling the capability to combine various sorts of LLM-Engines, locally or remote alike. But thats not going to come in the first version most likely (not sure about that).
+> **WARNING**: This is currently just a very basic prototype. I will remove this message as soon as I consider it usable/shareable. For example, right now it is aimed at one LLM engine, which will change in the future, enabling the capability to combine various sorts of LLM engines, local or remote alike. But that’s not going to come in the first version most likely (not sure about that).
 
 ## Supported Technologies
 
@@ -27,7 +27,7 @@ For example when you search for a specific package in Python, or even better pro
     <td valign="top" style="border:none">
       <table>
         <thead>
-          <tr><th >LLM-Engine</th><th>Status</th></tr>
+          <tr><th>LLM Engine</th><th>Status</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -48,7 +48,7 @@ For example when you search for a specific package in Python, or even better pro
         </thead>
         <tbody>
           <tr>
-            <td><a href="https://github.com/searxng/searxng">SearXNG</a></td>
+            <td><a href="https://github.com/searxng/searxng">SearxNG</a></td>
             <td><code>development</code></td>
           </tr>
         </tbody>
@@ -62,7 +62,7 @@ For example when you search for a specific package in Python, or even better pro
         <tbody>
           <tr><td>CLI Conversations</td><td><code>working</code></td></tr>
           <tr><td>HTTP REST API</td><td><code>implemented</code>, <code>testing</code></td></tr>
-          <tr><td>WebSocket-Server</td><td><code>implemented</code>, <code>testing</code></td></tr>
+          <tr><td>WebSocket Server</td><td><code>implemented</code>, <code>testing</code></td></tr>
         </tbody>
       </table>
     </td>
@@ -72,21 +72,21 @@ For example when you search for a specific package in Python, or even better pro
 ## Application Flow
 <img src="flowchart.svg" alt="Flowchart" width="auto"/>
 
-## Current planning and outlook
+## Current Planning and Outlook
 
-> I just want to have one prompt and get the results aggregated, cleaned up and spoonfeeded - reliabily (because I`m lazy).
+> I just want to have one prompt and get the results aggregated, cleaned up, and spoon-fed—reliably (because I’m lazy).
 
-The basic idea behind this all are pipelines. One pipeline per intent. So say you want to search for Code you have a Code-Pipeline. If you search for Technical Documentation you will have a Tech Doc Pipeline. If you search for Research Papers you will search for Research Papers (and only that). So you are going to have a specific Pipeline. That given - this does sound complex - and somewhat you could theoretically already do by manually controlling the Search Engines there are but it should be as transparent as possible and as easy as possible. 
+The basic idea behind this is pipelines: one pipeline per intent. So, say you want to search for code—you have a Code Pipeline. If you search for technical documentation, you will have a Tech-Doc Pipeline. If you search for research papers, you will have a Research-Paper Pipeline. Each is a specific pipeline. That given, this does sound complex, and theoretically you could already do it by manually controlling the search engines, but it should be as transparent and as easy as possible.
 
-So my idea would be implementing that first in a specific way that it works automatically by intent extraction from the user prompt and afterwards move that towards having the ability to create your own pipelines for very specific tasks that are tailored to your workflow and use-case - the user itself (likely .yml or .toml). Technically speaking it might be smart to not just connect to one Engine on both ends but rather enable combinations of local LLM and remote LLM-Engines in parallel.
+My idea is to implement that first in a specific way that works automatically via intent extraction from the user prompt and, afterwards, move toward giving users the ability to create their own pipelines for very specific tasks tailored to their workflow and use case (likely via .yml or .toml). Technically speaking, it might be smart not to connect to just one engine on both ends but rather to enable combinations of local and remote LLM engines in parallel.
 
-We should not blindfool ourselves into propitary (LLM) Search Engines because we`re then very fragile with the outcome, not on a day by day basis but rather more like on a minute by minute basis. The Model changes, they filter stuff, making matters worse - having the reliability that the functionality would not change or break completely. I will likely not implement a Frontend for this. What I would want to do is implement this first into something like [open-webui](https://github.com/open-webui/open-webui), for example trough a simple function against our API. 
+We should not blind-fool ourselves into proprietary (LLM) search engines because we’re then very fragile with the outcome—not on a day-by-day basis but rather minute by minute. The model changes, they filter stuff, making matters worse—having the reliability that the functionality would not change or break completely. I will likely not implement a frontend for this. What I want to do is implement this first into something like [open-webui](https://github.com/open-webui/open-webui), for example through a simple function against our API.
 
-I basically created this because I`m curiously interested in that topic for a longer time now, and feel like I can learn something from this.
+I basically created this because I’ve been genuinely interested in this topic for a long time and feel like I can learn something from it.
 
 ## Features in a Nutshell
 
-- **Intent extraction** 
+- **Intent extraction**
 - **Web search retrieval**
 - **Result filtering, scoring, and accumulation**
 - **Answer synthesis**
@@ -95,13 +95,12 @@ I basically created this because I`m curiously interested in that topic for a lo
 ## Setup
 1. Clone the repo
 2. Adjust `.env` as required (check `config.py` for possible config)
-3. Run `poetry install` in Terminal
-
+3. Run `poetry install` in the terminal
 
 ## Usage via Terminal
 | Command              | Description        |
 |----------------------|--------------------|
-| `poetry run cli`     | Start all Services |
-| `poetry run cli cmd` | Commandline REPL   |
+| `poetry run cli`     | Start all services |
+| `poetry run cli cmd` | Command-line REPL  |
 | `poetry run cli api` | HTTP REST API      |
 | `poetry run cli ws`  | WebSocket API      |
