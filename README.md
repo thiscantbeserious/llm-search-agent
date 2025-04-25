@@ -18,6 +18,18 @@ For example when you search for a specific package in Python, or even better pro
 
 > **WARNING**: This is currently just a very basic prototype, I will remove this message as soon as I consider it usable / shareable.
 
+## Current planning and outlook
+
+The basic idea behind this all are pipelines. One pipeline per intent. So say you want to search for Code you have a Code-Pipeline. If you search for Technical Documentation you will have a Tech Doc Pipeline. If you search for Research Papers you will search for Research Papers (and only that). So you are going to have a specific Pipeline. That given - this does sound complex - and somewhat you could theoretically already do by manually controlling the Search Engines there are but it should be as transparent as possible and as easy as possible. 
+
+> I just want to have one prompt and get the results aggregated, cleaned up and spoonfeeded - reliabily because I`m lazy.
+
+So my idea would be implementing that first in a specific way that it works automatically by intent extraction from the user prompt and afterwards move that towards having the ability to create your own pipelines for very specific tasks that are tailored to your workflow and use-case - the user itself (likely .yml or .toml). Technically speaking it might be smart to not just connect to one Engine on both ends but rather enable combinations of local LLM and remote LLM-Engines in parallel.
+
+We should not blindfool ourselves into propitary (LLM) Search Engines because we`re then very fragile with the outcome, not on a day by day basis but rather more like on a minute by minute basis. The Model changes, they filter stuff, making matters worse - we have zero control about the outcome. I will likely not implement a Frontend for this. What I would want to do is implement this first into something like [open-webui](https://github.com/open-webui/open-webui), for example trough a simple function against our API. 
+
+I basically created this because I`m curiously interested in that topic for a longer time now, and feel like I can learn something from this.
+
 ## Supported Technologies
 
 <table border="0" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:none">
