@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="lsa_icon_round.svg" width="220" height="220" alt="LMM Search Agent">
+</p>
+
 # LLM Search Agent
 
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
