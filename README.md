@@ -16,7 +16,7 @@ For example when you search for a specific package in Python, or even better pro
 - **LangChain** for LLM prompt handling & SearxNG tool
 - **BFS/DFS** iterative retrieval with SearxNG suggestions
 
-> **WARNING**: This is currently being crafted, I will remove this message as soon as I consider it usable / shareable.
+> **WARNING**: This is currently just a very basic prototype, I will remove this message as soon as I consider it usable / shareable.
 
 ## Supported Technologies
 
