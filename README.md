@@ -84,12 +84,12 @@ We should not blindfool ourselves into propitary (LLM) Search Engines because we
 
 I basically created this because I`m curiously interested in that topic for a longer time now, and feel like I can learn something from this.
 
-## Functionality
+## Features in a Nutshell
 
-- **Intent extraction** via LangChain's `LLMChain`
-- **Web search retrieval** via LangChain's `SearxSearchWrapper`
+- **Intent extraction** 
+- **Web search retrieval**
 - **Result filtering, scoring, and accumulation**
-- **Answer synthesis** via LangChain's `LLMChain`
+- **Answer synthesis**
 - **Multiple transport connectors**: CLI, HTTP REST API, WebSocket
 
 ## Setup
