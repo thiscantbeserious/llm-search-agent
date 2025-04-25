@@ -25,7 +25,7 @@ For example when you search for a specific package in Python, or even better pro
     <td valign="top" style="border:none">
       <table>
         <thead>
-          <tr><th >LLM</th><th>Status</th></tr>
+          <tr><th >LLM-Engine</th><th>Status</th></tr>
         </thead>
         <tbody>
           <tr>
