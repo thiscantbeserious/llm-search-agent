@@ -2,7 +2,7 @@
 
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/thiscantbeserious/llm-search-agent?utm_source=oss&utm_medium=github&utm_campaign=thiscantbeserious%2Fllm-search-agent&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
-Performs an agent-driven web search that can be used both by the user and to provide a knowledge base for LLMs, delivering answers that are not accessible through sheer training alone (aka enriching answers that are not constantly outdated).
+Performs an agent-driven web search that can be used both by the user and to provide a knowledge base for LLMs, delivering answers that are not accessible through sheer training alone (aka answers that are not constantly outdated).
 
 It could also be seen as "Deep Research," but I refuse to call something "Deep Research" if we haven’t even solved the basics correctly yet.
 
