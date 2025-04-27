@@ -108,3 +108,7 @@ I basically created this because I’ve been genuinely interested in this topic 
 | `poetry run cli cmd` | Command-line REPL  |
 | `poetry run cli api` | HTTP REST API      |
 | `poetry run cli ws`  | WebSocket API      |
+
+## Credits
+
+Logo created by https://www.michaelgubert.de/
